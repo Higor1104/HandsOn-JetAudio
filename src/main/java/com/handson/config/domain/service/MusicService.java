@@ -1,4 +1,4 @@
-package com.handson.config.domain.model;
+package com.handson.config.domain.service;
 
 import org.springframework.stereotype.Service;
 
