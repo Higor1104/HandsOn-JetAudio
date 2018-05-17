@@ -14,4 +14,20 @@ public class Playlist {
 	
 	private List<Music> musics;
 
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public List<Music> getMusics() {
+		return musics;
+	}
+
+	public void setMusics(List<Music> musics) {
+		this.musics = musics;
+	}
+
 }
