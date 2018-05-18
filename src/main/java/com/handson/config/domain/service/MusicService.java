@@ -1,8 +1,11 @@
 package com.handson.config.domain.service;
 
-import org.springframework.stereotype.Service;
+import com.handson.config.domain.model.Music;
 
-@Service
-public class MusicService {
+import java.util.List;
 
+
+public interface MusicService {
+
+    List<Music> getAll() ;
 }

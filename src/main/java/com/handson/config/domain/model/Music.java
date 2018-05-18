@@ -1,9 +1,6 @@
 package com.handson.config.domain.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Music {
@@ -13,7 +10,10 @@ public class Music {
 	private String id;
 	private String nome;
 	private String artistaId;
-	private Artista artista;
+
+	@OneToOne
+	@JoinColumn(name = "artist_id")
+	private Artist artist;
 	
 	public String getId() {
 		return id;
@@ -33,11 +33,12 @@ public class Music {
 	public void setArtistaId(String artistaId) {
 		this.artistaId = artistaId;
 	}
-	public Artista getArtista() {
-		return artista;
+	public Artist getArtist() {
+		return artist;
 	}
-	public void setArtista(Artista artista) {
-		this.artista = artista;
+	public void setArtist(Artist artist) {
+		this.artist = artist;
 	}
+
 	
 }
