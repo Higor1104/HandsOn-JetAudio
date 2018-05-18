@@ -1,4 +1,4 @@
-package com.handson.config;
+package com.handson.sqllite.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

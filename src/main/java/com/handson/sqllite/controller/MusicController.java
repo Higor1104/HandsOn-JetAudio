@@ -1,32 +1,27 @@
-package com.handson.controller;
+package com.handson.sqllite.controller;
 
-import com.handson.config.domain.service.MusicService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 
-@Controller("/music")
+@RestController
+@RequestMapping("api/musics")
 public class MusicController {
 
 	private static final Logger logger = LoggerFactory.getLogger(MusicController.class);
 
-	private  MusicService musicService;
-	
-	@Autowired
-	MusicController controller;
-
-	public MusicController(MusicService musicService) {
-		this.musicService = musicService;
+	public MusicController() {
+		super();
 	}
 
-	@GetMapping("/")
-	public String getAllMusic(){
-		musicService.getAll();
-
-		return "";
+	@RequestMapping(value = "", method = RequestMethod.GET)
+	public ResponseEntity<String> getAllMusic(){
+		return ResponseEntity.ok("Hello, World!");
 	}
 	
 }
