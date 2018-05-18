@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
-@Controller("api/music")
+@Controller("/music")
 public class MusicController {
 
 	private static final Logger logger = LoggerFactory.getLogger(MusicController.class);
