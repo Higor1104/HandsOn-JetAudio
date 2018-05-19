@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: springboot-sqllite-example
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: geeh
+Built-By: higor
 Implementation-Vendor-Id: com.handson
-Build-Jdk: 1.8.0_131
+Build-Jdk: 1.8.0_171
 Implementation-URL: http://projects.spring.io/spring-boot/springboot-s
  qllite-example/
 Created-By: Maven Integration for Eclipse
