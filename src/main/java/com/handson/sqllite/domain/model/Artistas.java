@@ -18,7 +18,7 @@ public class Artistas {
 
 	private String nome;
 	
-	@OneToMany(fetch = FetchType.LAZY)
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "artista", targetEntity = Musicas.class)
 	private List<Musicas> musicas;
 	
 	public String getId() {
